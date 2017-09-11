@@ -1,0 +1,142 @@
+.won-container{
+    font: normal 14px/1.4em 'ITCAvantGardePro-Md';
+}
+.won-container .notification-container {
+    position: fixed;
+    left: 15px;
+    bottom: -300px;
+    background: #333;
+    padding: 30px;
+    color: #333;
+    z-index: 9999;
+    width: auto;
+    background: white;
+    border: 1px solid rgba(51, 51, 51, 0.20);
+    transition: all 2s;
+    padding: 0px;
+    -webkit-box-shadow: 0 0 4px 0 rgba(0,0,0,.4);
+    -moz-box-shadow: 0 0 4px 0 rgba(0,0,0,.4);
+    box-shadow: 0 0 4px 0 rgba(0,0,0,.4);
+    min-height: 90px;
+}
+.won-container  .notification-container.show{
+	bottom: 15px;
+    -webkit-animation: fadein 6s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 6s; /* Firefox < 16 */
+        -ms-animation: fadein 6s; /* Internet Explorer */
+         -o-animation: fadein 6s; /* Opera < 12.1 */
+            animation: fadein 6s;
+}
+.won-container .notification-container .notification {
+    display: none;
+}
+.won-container .notification-container .notification > div {
+    display: inline-block;
+}
+
+
+.won-container .notification .text header {
+    font-size: 12px;
+    line-height: 14px;
+    color: rgba(0, 0, 0, 0.60);
+    margin-top: 2px;
+}
+.won-container .notification .text header a {
+    font-size: 17px;
+    margin-top: 7px;
+    display: block;
+    margin-bottom: -5px;
+    color: #2D8843;
+}
+.won-container .notification .text p {
+    margin-bottom: 0px;
+    font-size: 12px;
+    margin-top: 2px;
+}
+.won-container .notification .text p.ago {
+    font-size: 11px;
+    margin-top: 10px;
+    color: rgba(0, 0, 0, 0.60);
+}
+.won-container .notification .image {
+    float: left;
+}
+.won-container .notification .image img {
+    width: 100%;
+    height: auto;
+    max-width: 60px;
+    margin: 5px 0px 0px 5px;
+}
+.won-container .notification-container .notification .text {
+    display: inline-block;
+    padding-left: 15px;
+    padding-top: 10px;
+    padding-right: 10px;
+}
+.won-container .notification-container a {
+    font-weight: bolder;
+    color: green;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@media screen and (max-width:500px){
+     .won-container .notification-container{
+         left:0px;
+         width: 100%;
+         padding-top: 5px;
+     }
+    .won-container .notification-container.show {
+        bottom: 30px;
+        width: 100%;
+    }
+    .won-container .notification .text header {
+        font-size: 13px;
+    }
+    .won-container .notification-container .notification > div {
+        display: inline-block;
+    }
+    .won-container .notification .image {
+        float: left;
+        margin-right: 5px;
+    }
+    .won-container .notification-container .notification .text {
+        display: block;
+        padding-top: 1px;
+    }
+    
+    .won-container  .notification-container.show{
+        -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+           -moz-animation: fadein 2s; /* Firefox < 16 */
+            -ms-animation: fadein 2s; /* Internet Explorer */
+             -o-animation: fadein 2s; /* Opera < 12.1 */
+                animation: fadein 2s;
+    }
+}
